@@ -1,19 +1,10 @@
-import { useRouter } from 'next/router';
 import React from "react";
+import { useRouter } from 'next/router';
 import {Header} from "../../components/Header";
-import {getTimeFromDate} from "../../utils/getTimeFromDate";
 const format = require('date-format');
-import {
-    Wind,
-    Sunset,
-    Sunrise,
-    Thermometer,
-    ArrowDownCircle,
-    ArrowUpCircle,
-    Smile,
-} from "react-feather";
 import {CurrentWeather} from "../../components/CurrentWeather";
 import {Forecast} from "../../components/Forecast";
+
 export async function getStaticPaths() {
     return { paths: [], fallback: true };
 }
