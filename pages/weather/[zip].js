@@ -27,16 +27,8 @@ export async function getStaticProps({ params }) {
         }
     }
 
-    const countryCode = 'us'
-    const currentWeatherRes = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?zip=${zip},${countryCode}&appid=${process.env.WEATHER_API_KEY}&units=imperial`
-    )
-    const currentWeatherData = await currentWeatherRes.json()
-
-    const forecastWeatherRes = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?zip=${zip},${countryCode}&appid=${process.env.WEATHER_API_KEY}&units=imperial`
-    )
-    const forecastWeatherData = await forecastWeatherRes.json()
+    const weatherFetch = await fetch(`${process.env.API_BASE}/api/getWeather/${zip}`)
+    const {currentWeatherData, forecastWeatherData} = await weatherFetch.json()
 
     return {
         props: {
