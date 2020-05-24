@@ -5,7 +5,7 @@ import {Header} from "../components/Header";
 export default function Home() {
   return (
       <>
-        <div className="page" style={{height: "90vh", display: "flex", alignItems: "center"}}>
+        <div className="page" style={{height: "80vh", display: "flex", alignItems: "center"}}>
           <Header/>
         </div>
         <footer>

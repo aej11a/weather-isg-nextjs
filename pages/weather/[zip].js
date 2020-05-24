@@ -77,7 +77,7 @@ export default function Weather({zip, currentWeatherData, forecastWeatherData, d
                 <br/>
                 <footer>
                     <br/>
-                    Generated {dateGenerated}
+                    Generated {dateGenerated} UTC
                     <br/>
                     Site by <a href="https://twitter.com/ajones_codes">Andrew Jones</a>
                     <br/>
