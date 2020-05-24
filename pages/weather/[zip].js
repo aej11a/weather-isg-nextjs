@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from 'next/router';
+import Head from 'next/head'
 import {Header} from "../../components/Header";
 const format = require('date-format');
 import {CurrentWeather} from "../../components/CurrentWeather";
@@ -53,6 +54,9 @@ export default function Weather({zip, currentWeatherData, forecastWeatherData, d
     else {
         return (
             <div className="page">
+                <Head>
+                    <title>Weather for {zip}</title>
+                </Head>
                 <Header linking/>
                 <br/>
                 <CurrentWeather currentWeatherData={currentWeatherData}/>
