@@ -9,7 +9,7 @@ export default function Home() {
           <Header/>
         </div>
         <footer>
-          Site by <a href="https://twitter.com/ajones_codes">Andrew Jones</a>
+          Site by <a href="https://github.com/aej11a">Andrew Jones</a>
           <br/>
           Powered by <a href="https://nextjs.org/">NextJS by Vercel</a>
         </footer>
